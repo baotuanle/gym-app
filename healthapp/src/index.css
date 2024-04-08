@@ -1,0 +1,488 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.trainer-logout {
+  display: block;
+  margin: 50% auto; 
+  margin-top: -130%;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-bottom: 5%;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.clickable-search {
+  cursor: pointer; 
+}
+
+.clickable-search:hover {
+  color: darkblue; 
+  text-decoration: none; 
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formContainer label {
+  margin-bottom: 5px;
+}
+
+.formContainer input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.search-results-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.search-results li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  list-style: none;
+  width: 180spx;
+  text-align: center; 
+}
+
+.search-results li:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+.search-results li a {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.booked-time, .booked-session {
+  color: red;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.health-statistics,
+.achievements,
+.exercises {
+  flex: 1 1 auto;
+  margin: 0 10px;
+}
+
+.header-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.nav-buttons {
+  display: flex;
+  padding-right: 10px;
+}
+
+.nav-buttons button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: #777;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 1%;
+}
+
+.achievements {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; 
+  flex: 1; 
+}
+
+.achievements .achievement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  flex-wrap: wrap; 
+}
+
+.achievements .achievement-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.achievements .achieve-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.achievements .achieve-delete:hover {
+  background-color: #c82333;
+}
+
+.achievements input[type="text"],
+.achievements button {
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px; 
+}
+
+
+.exercises {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex: 1; 
+  flex-wrap: wrap; 
+}
+
+.exercises .add-exercise {
+  margin-top: 10px;
+}
+
+.exercises .exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+
+}
+
+.exercises .exercise-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.exercises .exercise-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.exercises .exercise-delete:hover {
+  background-color: #c82333;
+}
+
+.exercises input[type="text"],
+.exercises input[type="number"],
+.exercises button {
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px; 
+}
+
+.health-statistics {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex: 1; 
+}
+
+.health-statistics h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.health-statistics div {
+  margin-bottom: 8px;
+}
+
+.health-statistics div:last-child {
+  margin-bottom: 0; 
+}
+
+.health-statistics span {
+  font-weight: bold;
+}
+
+.achievements,
+.exercises,
+.health-statistics {
+  min-height: 280px; 
+  max-height: 280px; 
+  overflow-y: auto; 
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #ddd; 
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-content {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info div {
+  margin-bottom: 10px;
+}
+
+.profile-info strong {
+  margin-right: 5px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile-form button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-form button:hover {
+  background-color: #0056b3;
+}
+
+.edit-profile-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+  background-color: #218838;
+}
+
+/* equipment.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+
+.calendar-container {
+  position: static;
+  margin-top: 500px;
+}
+
+.session-container,
+.class-container {
+  margin-top: 20px;
+}
+
+.center-container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.class-container {
+  display: flex;
+  gap: 20px; 
+}
+
+.class-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.class-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.class-details {
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+
+.user-class-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.avail {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
